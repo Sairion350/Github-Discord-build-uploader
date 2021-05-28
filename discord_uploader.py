@@ -9,7 +9,7 @@ uploadfile = os.getcwd() + '/dist/' + sys.argv[3]
 client = discord.Client()
 
 
-channelID = sys.argv[2]
+channelID = int(sys.argv[2])
 discordtoken = sys.argv[1]
 
 @client.event
