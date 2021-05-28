@@ -4,7 +4,7 @@ import os
 
 # args: > python script.py (Discord token) (discord channel) (build name)
 
-uploadfile = os.getcwd() + '/dist/' + sys.argv[3]
+uploadfile = os.getcwd() + '/dist/' + sys.argv[3] + ".zip"
 
 client = discord.Client()
 
@@ -19,7 +19,7 @@ async def on_ready():
 	print('------')
     
 	area=client.get_channel(channelID)
-	await area.send(file=discord.File(uploadfile, filename=sys.argv[3]))
+	await area.send(file=discord.File(uploadfile, filename=sys.argv[3] + ".zip"))
 
 	await client.close()
 
