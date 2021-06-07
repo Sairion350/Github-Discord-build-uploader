@@ -21,7 +21,7 @@ async def on_ready():
 	area=client.get_channel(channelID)
 	entries = os.listdir(uploadfolder)
 	for entry in entries:
-        await area.send(file=discord.File(uploadfolder + entry, filename=f"{entry}.zip"))
+    	await area.send(file=discord.File(uploadfolder + entry, filename=f"{entry}.zip"))
 
 	await client.close()
 
