@@ -19,7 +19,8 @@ async def on_ready():
 	print('------')
     
 	area=client.get_channel(channelID)
-	await area.send(file=discord.File(uploadfile, filename=sys.argv[3] + ".zip"))
+	for filename in sys.argv[3:]:
+        await area.send(file=discord.File(uploadfile, filename=f"{filename}.zip"))
 
 	await client.close()
 
